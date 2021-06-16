@@ -1,0 +1,41 @@
+<form [formGroup]="PositionForm" (ngSubmit)="onAddPosition()">
+    <div class="container-fluid mt-3">
+      <div class="col-12 mt-3">
+        <div class="form-group">
+          <label for="name">Имя</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Имя"
+            formControlName="name"
+            [ngClass]="{
+              'has-error':
+              PositionForm.get('name')?.invalid &&
+              PositionForm.get('name')?.touched
+            }"
+          />
+          <small id="nameHelp" class="form-text text-muted"
+            >Обязательное поле, длинной до 20 символов.</small
+          >
+          <div class="row mt-3">
+            <div class="col-12">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                [disabled]="PositionForm.invalid"
+              >
+                Сохранить
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger ms-2"
+                *ngIf="id"
+                (click)="onDeletePosition()"
+              >
+                Удалить
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>

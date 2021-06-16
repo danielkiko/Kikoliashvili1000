@@ -1,0 +1,46 @@
+{
+  "personals": [
+    {
+      "name": "ddd",
+      "surname": "sss",
+      "patronymic": "aaa",
+      "position": 2,
+      "id": 1
+    },
+    {
+      "name": "dasdasd",
+      "surname": "asdasdasd",
+      "patronymic": "asasdasd",
+      "position": 3,
+      "id": 2
+    },
+    {
+      "name": "имя",
+      "surname": "фамилия",
+      "patronymic": "отчество",
+      "position": 1,
+      "id": 3
+    },
+    {
+      "name": "zzzzzzzzzz",
+      "surname": "zzzzzzzzzzz",
+      "patronymic": "zzzzzzzzzzzzzzz",
+      "position": 2,
+      "id": 4
+    }
+  ],
+  "positions": [
+    {
+      "name": "Директор",
+      "id": 1
+    },
+    {
+      "name": "Аукционер",
+      "id": 2
+    },
+    {
+      "name": "Рекламщик",
+      "id": 3
+    }
+  ]
+}

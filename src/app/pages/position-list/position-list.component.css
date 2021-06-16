@@ -1,0 +1,8 @@
+tbody tr:hover{
+    cursor: pointer;
+    background-color:aliceblue;
+    
+}
+thead th:hover{
+    cursor: pointer;
+}

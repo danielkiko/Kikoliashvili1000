@@ -1,0 +1,34 @@
+<div class="container-fluid mt-3 ml3">
+    <div class="col-12">
+      <button class="btn btn-primary" (click)="linkToItem()">
+        Новый
+      </button>
+    </div>
+  </div>
+  <div class="container-fluid mt-3">
+    <div class="col-12 ">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" (click)="sortByName()">Имя</th>
+            <th scope="col"(click)="sortBySurname()">Фамилия</th>
+            <th scope="col"(click)="sortByPatronymic()">Отчество</th>
+            <th scope="col" (click)="sortByPosition()">Должность</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let personal of personals"
+            (click)="linkToItem(personal.id)"
+          >
+            <td>{{ personal.id }}</td>
+            <td>{{ personal.name }}</td>
+            <td>{{ personal.surname }}</td>
+            <td>{{ personal.patronymic }}</td>
+            <td>{{ getPositionName(personal.position) }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
